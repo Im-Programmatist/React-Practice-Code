@@ -7,6 +7,10 @@ export class RegularComp extends Component {
         <div>I am regular Component {this.props.name}</div>
     )
   }
+  shouldComponentUpdate(){
+    console.log("shouldUpdateCOmponent in regular component");
+    return true; //if it returns false then render method not run
+  }
 }
 
 export default RegularComp
