@@ -10,6 +10,7 @@ import ReactLifeCycle from './Componets/LifeCycleMethods/ReactLifeCycle';
 import ClssComProps from './ClssComProps';
 import FuncComProps from './FuncComProps';
 import StateInComp from './stateInComp';
+import NewReduxComp from './Redux/NewComponent';
 
 
 class App extends React.Component {
@@ -19,6 +20,10 @@ class App extends React.Component {
 			apiUrl:"http://localhost:9000/testAPI",
 			apiResponse:""
 		}
+	}
+	style={
+		fontStyle:"bold",
+        color:"teal",
 	}
 	callAPI(){
 		fetch(this.state.apiUrl)
@@ -44,6 +49,8 @@ class App extends React.Component {
 					<ClssComProps title="Hellow react"><p>This ClssComProps children element from parent</p></ClssComProps>
 					<FuncComProps name="abc name"><button type="button">Hello CLick Me</button></FuncComProps>
 					<StateInComp />
+					<h3 style={this.style}>Welcome to Redux demo</h3>
+					<NewReduxComp />
 				</header>
 			</div>
 		);
