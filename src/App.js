@@ -11,7 +11,10 @@ import ClssComProps from './ClssComProps';
 import FuncComProps from './FuncComProps';
 import StateInComp from './stateInComp';
 import NewReduxComp from './Redux/NewComponent';
-
+import StepperComp from './Componets/StepperComp';
+import GeekStepper from './stepperForm.jsx';
+import StepperTab from './StepperTab.jsx';
+import GridComponent from './Componets/GridComponent';
 
 class App extends React.Component {
 	constructor(props) {
@@ -37,23 +40,30 @@ class App extends React.Component {
 	render(){
 		return (
             <div className="App">
-				{/* <header className="App-header">
+				<header className="App-header">
 					<img src={logo} className="App-logo" alt="logo" />
 					<p> Response of api is {this.state.apiResponse}</p>
-					<Funcomp />
-					<ClassComp />
-					<CLick/>
-					<MouseHover />
-					 <ParentComp />
-					<ReactLifeCycle nameFromParent="ck"/>
+				</header>
+				<Funcomp />
+				<ClassComp />
+				<CLick/>
+				<MouseHover />
+				<ParentComp />
+				<ReactLifeCycle nameFromParent="ck"/>
+				<FuncComProps name="abc name"><button type="button">Hello CLick Me</button></FuncComProps>
+				<StateInComp />
+				<h3 style={this.style}>Welcome to Redux demo</h3>
+				<NewReduxComp />
+				<StepperComp />
+				{/*
 					<ClssComProps title="Hellow react"><p>This ClssComProps children element from parent</p></ClssComProps>
-					<FuncComProps name="abc name"><button type="button">Hello CLick Me</button></FuncComProps>
-					<StateInComp />
-					<h3 style={this.style}>Welcome to Redux demo</h3>
-					<NewReduxComp />
-				</header> */}
+					<ClssComProps title="Hellow react"/>
+				*/}
 
-<ClssComProps title="Hellow react"/>
+				<GeekStepper />
+				<StepperTab />
+
+				<GridComponent noOfGrids={5} timerDelay={10}/>
 
 			</div>
 		);
